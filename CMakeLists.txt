@@ -3,4 +3,6 @@ project(COP4533_Prog_Assi1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(COP4533_Prog_Assi1 main.cpp)
+add_executable(COP4533_Prog_Assi1 main.cpp
+        GaleShapely.cpp
+        GaleShapely.h)
