@@ -25,15 +25,15 @@ Instructions to compile code (command line):
 
    b. To run verifier:
 
-      i. Make sure that the matcher has run first (unless you want to use some pre-created files)
+         i. Make sure that the matcher has run first (unless you want to use some pre-created files)
 
-      ii. Enter either 'Verifier', 'verifier', 'Verify', 'verify'
+         ii. Enter either 'Verifier', 'verifier', 'Verify', 'verify'
 
-      iii. State the input file you would like to run in this format: ..\input\inputStable1.txt
+         iii. State the input file you would like to run in this format: ..\input\inputStable1.txt
 
-      iv. Find the similarly named output file (or provide the output file name you used in the matcher) in this format: ..\output\outputStable1.txt
+         iv. Find the similarly named output file (or provide the output file name you used in the matcher) in this format: ..\output\outputStable1.txt
 
-      v. When run, you should see the result of the verification, printing a result that confirms if it is valid and stable, invalid, or unstable, and the time it took to run
+         v. When run, you should see the result of the verification, printing a result that confirms if it is valid and stable, invalid, or unstable, and the time it took to run
 
 
 
