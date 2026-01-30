@@ -6,20 +6,35 @@ Contributors:
 
 Instructions to compile code (command line):
 1. Download the zip file and extract.
+
 2. Open the command prompt, and navigate to the location of the extracted program file and the cmake folder (e.g. 'cd C:\Users\user\Downloads\COP4533_Programming_Assignment_1-master\COP4533_Programming_Assignment_1-master\cmake-build-debug')
+
 3. Run 'COP4533_Prog_Assi1.exe'
+
 4. When prompted with the question of 'Matcher or Verifier?':
+
    a. To run matcher:
-     i. Enter either 'Matcher', 'matcher', 'Match', or 'match'
-     ii. State the input file you would like to run in this format: ..\input\inputStable1.txt
-     ii. Find the similarly named output file (or provide a new output file name) in this format: ..\output\outputStable1.txt
-     iii. When run, you should see the result of the Gale-Shapely algorithm and the output file in the output folder, and the time it took to run
+
+      i. Enter either 'Matcher', 'matcher', 'Match', or 'match'
+
+      ii. State the input file you would like to run in this format: ..\input\inputStable1.txt
+
+      iii. Find the similarly named output file (or provide a new output file name) in this format: ..\output\outputStable1.txt
+
+      iv. When run, you should see the result of the Gale-Shapely algorithm and the output file in the output folder, and the time it took to run
+
    b. To run verifier:
-     i. Make sure that the matcher has run first (unless you want to use some pre-created files)
-     ii. Enter either 'Verifier', 'verifier', 'Verify', 'verify'
-     iii. State the input file you would like to run in this format: ..\input\inputStable1.txt
-     iv. Find the similarly named output file (or provide the output file name you used in the matcher) in this format: ..\output\outputStable1.txt
-     v. When run, you should see the result of the verification, printing a result that confirms if it is valid and stable, invalid, or unstable, and the time it took to run
+
+      i. Make sure that the matcher has run first (unless you want to use some pre-created files)
+
+      ii. Enter either 'Verifier', 'verifier', 'Verify', 'verify'
+
+      iii. State the input file you would like to run in this format: ..\input\inputStable1.txt
+
+      iv. Find the similarly named output file (or provide the output file name you used in the matcher) in this format: ..\output\outputStable1.txt
+
+      v. When run, you should see the result of the verification, printing a result that confirms if it is valid and stable, invalid, or unstable, and the time it took to run
+
 
 
 Input files (stored in the 'input' folder, manually created):
