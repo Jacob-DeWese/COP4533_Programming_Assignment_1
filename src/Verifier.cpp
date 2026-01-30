@@ -7,20 +7,46 @@
 #include <vector>
 using namespace std;
 
-bool Verifier::checkIfValid(vector<vector<int>>& matches, int numStudents) {
+bool Verifier::checkIfValid(vector<vector<int>>& matches, int numStudents, string& reason) {
     vector<bool> hospitals(numStudents, false);
     vector<bool> students(numStudents, false);
     for (int i = 0; i < matches.size(); i++) {
         int hospital = matches[i][0];
         int student = matches[i][1];
 
-        if (hospitals[hospital] || students[student]) {
-          return false;
+        if (hospital < 0 || hospital >= numStudents) {
+            reason = "Index out of range";
+            return false;
+        }
+        if (student < 0 || student >= numStudents) {
+            reason = "Index out of range";
+            return false;
         }
 
+        if (hospitals[hospital]) {
+            reason = "Hospital already in use";
+            return false;
+        }
+        if (students[student]) {
+            reason = "Student already in use";
+            return false;
+        }
         hospitals[hospital] = true;
         students[student] = true;
+
     }
+
+    for (int i = 0; i < numStudents; i++) {
+        if (hospitals[i] == false) {
+            reason = "Unmatched hospital";
+            return false;
+        }
+        if (students[i] == false) {
+            reason = "Unmatched student";
+            return false;
+        }
+    }
+    reason = "None";
     return true;
 }
 

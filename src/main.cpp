@@ -121,16 +121,21 @@ int main(int argc, char* argv[]) {
         matchFile.close();
 
         Verifier verifier;
-        bool isValid = verifier.checkIfValid(matches, numStudents);
+        string reason;
+        auto start = chrono::steady_clock::now();
+        bool isValid = verifier.checkIfValid(matches, numStudents, reason);
         pair<int, int> blockingPair;
         bool isStable = verifier.checkIfStable(matches, hospitalPreferenceList, studentPreferenceList, blockingPair);
+        auto end = chrono::steady_clock::now();
+        auto duration = chrono::duration_cast<chrono::nanoseconds>(end - start);
+        cout << "Time taken by Verifier: " << duration.count() << " nanoseconds!" << endl;
 
         if (isValid == true && isStable == true) {
             cout << "VALID STABLE" << endl;
         }
         else {
             if (isValid == false) {
-                cout << "INVALID" << endl;
+                cout << "INVALID: " << reason << endl;
             }
             if (isStable == false) {
                 cout << "UNSTABLE. Blocking pair: " << blockingPair.first << ", " << blockingPair.second << endl;

@@ -10,6 +10,6 @@ using namespace std;
 
 class Verifier {
 public:
-  bool checkIfValid(vector<vector<int>>& matches, int numStudents);
+  bool checkIfValid(vector<vector<int>>& matches, int numStudents, string& reason);
   bool checkIfStable(vector<vector<int>>& matches, vector<vector<int>>& hospitalPrefs, vector<vector<int>>& studentPrefs, pair<int, int>& blockingPair);
 };
