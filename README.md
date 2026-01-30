@@ -15,13 +15,13 @@ Instructions to compile code (command line):
 
    a. To run matcher:
 
-      i. Enter either 'Matcher', 'matcher', 'Match', or 'match'
+         i. Enter either 'Matcher', 'matcher', 'Match', or 'match'
 
-      ii. State the input file you would like to run in this format: ..\input\inputStable1.txt
+         ii. State the input file you would like to run in this format: ..\input\inputStable1.txt
 
-      iii. Find the similarly named output file (or provide a new output file name) in this format: ..\output\outputStable1.txt
+         iii. Find the similarly named output file (or provide a new output file name) in this format: ..\output\outputStable1.txt
 
-      iv. When run, you should see the result of the Gale-Shapely algorithm and the output file in the output folder, and the time it took to run
+         iv. When run, you should see the result of the Gale-Shapely algorithm and the output file in the output folder, and the time it took to run
 
    b. To run verifier:
 
