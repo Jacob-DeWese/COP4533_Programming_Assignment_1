@@ -5,6 +5,7 @@
 using namespace std;
 #include "GaleShapely.h"
 #include "Verifier.h"
+#include <chrono>
 
 int main(int argc, char* argv[]) {
     string pickFunction;
@@ -61,8 +62,11 @@ int main(int argc, char* argv[]) {
         }
         inputFile.close();
         GaleShapely galeShapely;
+        auto start = chrono::steady_clock::now();
         vector<vector<int>> matchings = galeShapely.GaleShapelyAlgorithm(hospitalPreferenceList, studentRankingList);
-
+        auto end = chrono::steady_clock::now();
+        auto duration = chrono::duration_cast<chrono::nanoseconds>(end - start);
+        cout << "Time taken by Gale-Shapely: " << duration.count() << " nanoseconds!" << endl;
         ofstream outputFile(outputFileName);
         if (!outputFile.is_open()) {
             cerr << "Error opening output file " << outputFileName << endl;
